@@ -10,6 +10,7 @@ func Init() {
 	index := router.Group("/")
 	{
 		index.GET("/login", controller.Login.Login)
+		index.POST("/login", controller.Login.Login)
 	}
 	router.Run(":8088")
 }
